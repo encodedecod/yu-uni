@@ -1,0 +1,109 @@
+@import '../../styles';
+
+$prefix: yp-dialog;
+.#{$prefix}-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.#{$prefix}-box {
+  position: relative;
+  display: flex;
+  padding: 20px 16px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: $white-color;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+  flex: 1;
+  .#{$prefix}-close-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    .#{$prefix}-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+.#{$prefix}-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.#{$prefix}-mask {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.#{$prefix}-mask-show {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black85-color;
+  opacity: 0.2;
+  visibility: visible;
+}
+
+.#{$prefix}-scale {
+  transform: scale(0);
+}
+
+.#{$prefix}-normal {
+  transform: scale(1);
+}
+
+.#{$prefix}-title {
+  @include bold-large-middle-font;
+
+  padding: 0 16px;
+  text-align: center;
+}
+
+.#{$prefix}-content {
+  margin-top: 12px;
+  text-align: center;
+  .#{$prefix}-text {
+    word-break: break-all;
+
+    @include normal-medium-middle-font($black65-color);
+  }
+}
+
+.#{$prefix}-btn {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+
+  &-item {
+    display: flex;
+    flex: 1;
+    .#{$prefix}-cancel-text {
+      @include bold-medium-middle-font($black65-color);
+    }
+    .#{$prefix}-confirm-text {
+      @include bold-medium-middle-font($white-color);
+    }
+  }
+}

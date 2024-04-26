@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dts/types",
+    "emitDeclarationOnly": true
+  },
+  "include": ["./src/packages/**/*.d.ts", "./src/packages/**/*.ts", "./src/packages/**/*.vue"],
+  "exclude": ["node_modules", "**/__test__/**/*", "**/__tests__/**/*", "**/*/common.ts", "vitest.config.ts"]
+}

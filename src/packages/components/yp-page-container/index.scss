@@ -1,0 +1,28 @@
+@import '../../styles';
+
+.header {
+  position: relative;
+  display: flex;
+  height: 51px;
+  padding: 0 16px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-txt {
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: $font-medium-middle-size;
+  font-weight: bold;
+  color: $black85-color;
+  text-align: center;
+  pointer-events: none;
+}
+
+.container {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}

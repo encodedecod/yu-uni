@@ -1,0 +1,81 @@
+@import '../../styles';
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$prefix: yp-toast;
+.#{$prefix}-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.#{$prefix}-box {
+  position: relative;
+  display: flex;
+  max-width: 90vw;
+  padding: 12px 16px;
+  background-color: $black65-color;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  .#{$prefix}-icon-margin {
+    margin-top: 4px;
+  }
+  .#{$prefix}-loading {
+    animation: rotation 2s linear infinite;
+  }
+}
+
+.#{$prefix}-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.#{$prefix}-mask {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.#{$prefix}-mask-show {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black85-color;
+  opacity: 0.2;
+  visibility: visible;
+}
+
+.#{$prefix}-scale {
+  transform: scale(0);
+}
+
+.#{$prefix}-normal {
+  transform: scale(1);
+}
+
+.#{$prefix}-content {
+  @include normal-medium-middle-font($white-color);
+  @include multi-ellipse(3);
+}
