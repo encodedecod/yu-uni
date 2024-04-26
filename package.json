@@ -28,12 +28,13 @@
     "docs:build": "vitepress build docs"
   },
   "lint-staged": {
-    "src/**/*.{js,vue,ts,tsx}": [
-      "pnpm lint:eslint:fix",
-      "pnpm lint:format:fix"
+    "*.{vue,js,ts,jsx,tsx,json}": [
+      "eslint --fix",
+      "prettier --write",
+      "bash -c 'npm run type-check'"
     ],
     "*.{scss,css,less}": [
-      "pnpm lint:style:fix"
+      "stylelint --fix"
     ]
   },
   "dependencies": {
