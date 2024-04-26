@@ -1,0 +1,40 @@
+@import '../../styles';
+
+$prefix: yp-top-bar;
+
+.#{$prefix} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  width: 100vw;
+  background-color: $white-color;
+  align-items: flex-end;
+
+  &-back {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-title-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 16px;
+    align-items: center;
+  }
+
+  &-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @include multi-ellipse(1);
+    @include bold-large-middle-font;
+  }
+}

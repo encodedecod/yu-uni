@@ -1,0 +1,60 @@
+@import '../../styles';
+
+$prefix: yp-button;
+.#{$prefix} {
+  border-color: transparent;
+  border-radius: 4px;
+
+  @include normal-medium-middle-font;
+
+  &-size {
+    &-normal {
+      padding: 9px 12px;
+    }
+
+    &-large {
+      padding: 11px 12px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &-type {
+    &-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    &-normal {
+      display: inline-block;
+    }
+  }
+
+  &-theme {
+    &-primary {
+      color: $white-color;
+      background-color: $primary-color;
+    }
+
+    &-default {
+      color: $black65-color;
+      background-color: $bg-color;
+    }
+
+    &-border {
+      color: $primary-color;
+      background-color: transparent;
+      border-color: $primary-color;
+      border-style: solid;
+      border-width: 1px;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.3;
+  }
+}

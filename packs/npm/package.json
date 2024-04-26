@@ -1,0 +1,28 @@
+{
+  "name": "@quni/uni-component",
+  "private": false,
+  "license": "MIT",
+  "description": "基于 Vue 3 的轻量、快速的多平台开发 UI 组件库",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "uniapp",
+    "vue3 component"
+  ],
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  },
+  "version": "0.0.1"
+}

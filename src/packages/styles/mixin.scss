@@ -1,0 +1,131 @@
+@import './font';
+@import './theme';
+
+/** 超出隐藏显示省略号 */
+@mixin ellipse() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/** 文字多行溢出 */
+@mixin multi-ellipse($row: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  line-clamp: $row;
+}
+
+@mixin normal-regular-small-font($color: $black85-color) {
+  font-size: $font-regular-small-size;
+  font-weight: $normal-weight;
+  line-height: 14px;
+  color: $color;
+}
+
+@mixin normal-medium-small-font($color: $black85-color) {
+  font-size: $font-medium-small-size;
+  font-weight: $normal-weight;
+  line-height: 15.4px;
+  color: $color;
+}
+
+@mixin normal-large-small-font($color: $black85-color) {
+  font-size: $font-large-small-size;
+  font-weight: $normal-weight;
+  line-height: 16.8px;
+  color: $color;
+}
+
+@mixin normal-regular-middle-font($color: $black85-color) {
+  font-size: $font-regular-middle-size;
+  font-weight: $normal-weight;
+  line-height: 18.2px;
+  color: $color;
+}
+
+@mixin normal-medium-middle-font($color: $black85-color) {
+  font-size: $font-medium-middle-size;
+  font-weight: $normal-weight;
+  line-height: 21px;
+  color: $color;
+}
+
+@mixin normal-large-middle-font($color: $black85-color) {
+  font-size: $font-large-middle-size;
+  font-weight: $normal-weight;
+  line-height: 23.8px;
+  color: $color;
+}
+
+@mixin normal-regular-big-font($color: $black85-color) {
+  font-size: $font-regular-big-size;
+  font-weight: $normal-weight;
+  line-height: 26.6px;
+  color: $color;
+}
+
+@mixin normal-medium-big-font($color: $black85-color) {
+  font-size: $font-medium-big-size;
+  font-weight: $normal-weight;
+  line-height: 29.4px;
+  color: $color;
+}
+
+@mixin bold-regular-small-font($color: $black85-color) {
+  font-size: $font-regular-small-size;
+  font-weight: $bold-weight;
+  line-height: 14px;
+  color: $color;
+}
+
+@mixin bold-medium-small-font($color: $black85-color) {
+  font-size: $font-medium-small-size;
+  font-weight: $bold-weight;
+  line-height: 15.4px;
+  color: $color;
+}
+
+@mixin bold-large-small-font($color: $black85-color) {
+  font-size: $font-large-small-size;
+  font-weight: $bold-weight;
+  line-height: 16.8px;
+  color: $color;
+}
+
+@mixin bold-regular-middle-font($color: $black85-color) {
+  font-size: $font-regular-middle-size;
+  font-weight: $bold-weight;
+  line-height: 18.2px;
+  color: $color;
+}
+
+@mixin bold-medium-middle-font($color: $black85-color) {
+  font-size: $font-medium-middle-size;
+  font-weight: $bold-weight;
+  line-height: 21px;
+  color: $color;
+}
+
+@mixin bold-large-middle-font($color: $black85-color) {
+  font-size: $font-large-middle-size;
+  font-weight: $bold-weight;
+  line-height: 23.8px;
+  color: $color;
+}
+
+@mixin bold-regular-big-font($color: $black85-color) {
+  font-size: $font-regular-big-size;
+  font-weight: $bold-weight;
+  line-height: 26.6px;
+  color: $color;
+}
+
+@mixin bold-medium-big-font($color: $black85-color) {
+  font-size: $font-medium-big-size;
+  font-weight: $bold-weight;
+  line-height: 29.4px;
+  color: $color;
+}
