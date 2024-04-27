@@ -18,7 +18,7 @@
 组件库
 
 ```bash
-pnpm add @yu-kit/components
+pnpm i @quni/uni-component
 ```
 
 ### 组件构建
